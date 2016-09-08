@@ -24,6 +24,7 @@ profit for that day.
 + Cost per Liter -> Float
 + Profits per Carton -> Float
 + Liters Produced -> Float
+
 #### Output
 + Cartons Needed -> Integer
 + Production Costs -> Float
