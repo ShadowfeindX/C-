@@ -1,34 +1,23 @@
-#Title: Milk Man
+#Title: Chapter 2, Problem 1
 ##Author: Rickey Barnes
  
 ###Info
-A milk carton can hold 3.78 liters of milk. Each morning, a dairy
-farm ships cartons of milk to a local grocery store. Each carton can
-hold 3.78 liters of milk. Write a program that allows the user to
-enter the cost of producing one liter of milk, the profit on each
-carton of milk, and the total amount of milk produced that day.
-The program then calculates and displays the number of milk cartons
-needed to hold the milk, the cost of producing the milk and the
-profit for that day.
+Write a program that prompts the user to
+input five decimal numbers. The program
+should then add the five decimal numbers,
+convert the sum to the nearest integer,
+and print the result.
 
 ###Example
 ```c++
-"How much does it cost to produce one liter of milk?" $0.59
-"What are your profits on a carton of milk?" $3.29
-"What was your total milk production for the day?" 131 Liters
+"Please enter 5 decimals:" 1.912 0.234 224 13.46 .11111
 
-"The total amount of cartons you would need is:" 35 Cartons
-"Your production cost for the day would be:" $77.29
-"Your total profits for the day would be:" $37.86
+"Your total (rounded to the nearest integer) is:" 240
 ```
 
 
 ####Input
-+ Cost per Liter -> Float
-+ Profits per Carton -> Float
-+ Liters Produced -> Float
++ Five Decimal Values -> Float
 
 ####Output
-+ Cartons Needed -> Integer
-+ Production Costs -> Float
-+ Profits -> Float
++ Rounded Total Value -> Integer
