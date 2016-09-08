@@ -2,7 +2,7 @@
 ***
 ### Info
 ### Example
-```
+```c++
 ```
 #### Input
 #### Output
