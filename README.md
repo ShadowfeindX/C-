@@ -1,14 +1,14 @@
-#Title: Chapter 2, Problem 1
-##Author: Rickey Barnes
+# Title: Round 'Em Up
+## Author: Rickey Barnes
  
-###Info
+### Info
 Write a program that prompts the user to
 input five decimal numbers. The program
 should then add the five decimal numbers,
 convert the sum to the nearest integer,
 and print the result.
 
-###Example
+### Example
 ```c++
 "Please enter 5 decimals:" 1.912 0.234 224 13.46 .11111
 
@@ -16,8 +16,8 @@ and print the result.
 ```
 
 
-####Input
+#### Input
 + Five Decimal Values -> Float
 
-####Output
+#### Output
 + Rounded Total Value -> Integer
