@@ -1,7 +1,7 @@
-#Title: Milk Man
-##Author: Rickey Barnes
+# Title: Milk Man
+## Author: Rickey Barnes
  
-###Info
+### Info
 A milk carton can hold 3.78 liters of milk. Each morning, a dairy
 farm ships cartons of milk to a local grocery store. Each carton can
 hold 3.78 liters of milk. Write a program that allows the user to
@@ -11,7 +11,7 @@ The program then calculates and displays the number of milk cartons
 needed to hold the milk, the cost of producing the milk and the
 profit for that day.
 
-###Example
+### Example
 ```c++
 "How much does it cost to produce one liter of milk?" $0.59
 "What are your profits on a carton of milk?" $3.29
@@ -23,12 +23,12 @@ profit for that day.
 ```
 
 
-####Input
+#### Input
 + Cost per Liter -> Float
 + Profits per Carton -> Float
 + Liters Produced -> Float
 
-####Output
+#### Output
 + Cartons Needed -> Integer
 + Production Costs -> Float
 + Profits -> Float
