@@ -13,21 +13,21 @@ profit for that day.
 
 ###Example
 ```c++
-"How much does it cost to produce one liter of milk?"" $0.59
+"How much does it cost to produce one liter of milk?" $0.59
 "What are your profits on a carton of milk?" $3.29
 "What was your total milk production for the day?" 131 Liters
 ```
 
 
 ####Input
-Cost per Liter -> Float
-Profits per Carton -> Float
-Liters Produced -> Float
++ Cost per Liter -> Float
++ Profits per Carton -> Float
++ Liters Produced -> Float
 
 ####Output
-Cartons Needed -> Integer
-Production Costs -> Float
-Profits -> Float
++ Cartons Needed -> Integer
++ Production Costs -> Float
++ Profits -> Float
 
 
 
