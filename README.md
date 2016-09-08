@@ -1,6 +1,6 @@
 # Title:
 ## Author:
-### Info:
-### Example:
+### Info
+### Example
 ####Input
 ####Output
