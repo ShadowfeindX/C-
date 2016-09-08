@@ -13,7 +13,7 @@ profit for that day.
 
 ###Example
 ```c++
-"How much does it cost to produce one liter of milk?"" $0.59
+"How much does it cost to produce one liter of milk?" $0.59
 "What are your profits on a carton of milk?" $3.29
 "What was your total milk production for the day?" 131 Liters
 ```
