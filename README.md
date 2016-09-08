@@ -16,6 +16,10 @@ profit for that day.
 "How much does it cost to produce one liter of milk?" $0.59
 "What are your profits on a carton of milk?" $3.29
 "What was your total milk production for the day?" 131 Liters
+
+"The total amount of cartons you would need is:" 35 Cartons
+"Your production cost for the day would be:" $77.29
+"Your total profits for the day would be:" $37.86
 ```
 
 
@@ -28,9 +32,3 @@ profit for that day.
 + Cartons Needed -> Integer
 + Production Costs -> Float
 + Profits -> Float
-
-
-
-The total amount of cartons you would need is: l
-Your production cost for the day would be: $
-Your total profits for the day would be: $
