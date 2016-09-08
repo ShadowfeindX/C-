@@ -1,6 +1,5 @@
 # Title: Milk Man
-## Author: Rickey Barnes
- 
+***
 ### Info
 A milk carton can hold 3.78 liters of milk. Each morning, a dairy
 farm ships cartons of milk to a local grocery store. Each carton can
@@ -13,11 +12,11 @@ profit for that day.
 
 ### Example
 ```c++
-"How much does it cost to produce one liter of milk?" $0.59
+"What is your production cost per liter?" $0.59
 "What are your profits on a carton of milk?" $3.29
-"What was your total milk production for the day?" 131 Liters
+"What was your total milk production?" 131 Liters
 
-"The total amount of cartons you would need is:" 35 Cartons
+"You would need a total of:" 35 Cartons
 "Your production cost for the day would be:" $77.29
 "Your total profits for the day would be:" $37.86
 ```
