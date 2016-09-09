@@ -2,62 +2,113 @@
 <h1><a id="Title_0"></a>Title</h1>
 <hr>
 <h3><a id="Info_2"></a>Info</h3>
-<h3><a id="Implementation_5"></a>Implementation</h3>
+<p>A movie in a local theater is in great demand. To help a local charity,
+the theater owner has decided to donate to the charity a portion of the
+gross amount generated from the movie. This example designs and
+implements a program that prompts the user to input the movie name,
+adult ticket price, child ticket price, number of adult tickets sold,
+number of child tickets sold, and percentage of the gross amount donated
+to charity. The program should output the movie name, total number of
+tickets sold, gross amount, percentage of amount donated, total amount
+donated, and net sale profits.</p>
+<h3><a id="Implementation_13"></a>Implementation</h3>
 <blockquote>
 <p>These are the constants and functions used to calculate the program output.</p>
 </blockquote>
-<pre><code>
+<pre><code>Tickets Sold -&gt; Adult Tickets Sold + Child Tickets Sold
+
+Adult Sales -&gt; Adult Tickets Sold X Adult Ticket Price
+
+Child Sales -&gt; Child Tickets Sold X Child Ticket Price
+
+Gross Sales -&gt; Adult Sales + Child Sales
+
+Amount Donated -&gt; Gross Sales X Percentage to Donate
+
+Net Sales -&gt; Gross Sales - Amount Donated
 </code></pre>
-<h2><a id="Input_12"></a>Input</h2>
+<h2><a id="Input_30"></a>Input</h2>
 <hr>
 <blockquote>
 <p>The following user data is needed to calculate the program output.</p>
 </blockquote>
 <ul>
-<li></li>
+<li>Movie Name -&gt; string</li>
+<li>Adult Ticket Price -&gt; float</li>
+<li>Child Ticket Price -&gt; float</li>
+<li>Adult Tickets Sold -&gt; short</li>
+<li>Child Tickets Sold -&gt; short</li>
+<li>Percentage to Donate -&gt; float</li>
 </ul>
-<h4><a id="Example_18"></a>Example</h4>
-<pre><code class="language-c++">
+<h4><a id="Example_41"></a>Example</h4>
+<pre><code class="language-c++"><span class="hljs-string">"What movie are you screening?"</span> TimeShift
+<span class="hljs-string">"What is the price of an adult ticket?"</span> $<span class="hljs-number">6.45</span>
+<span class="hljs-string">"What is the price of a child ticket?"</span> $<span class="hljs-number">3.45</span>
+<span class="hljs-string">"How many adult tickets did you sell?"</span> <span class="hljs-number">1920</span>
+<span class="hljs-string">"How many student tickets did you sell?"</span> <span class="hljs-number">640</span>
+<span class="hljs-string">"What percentage would you like to donate?"</span> <span class="hljs-number">10.00</span>%
 </code></pre>
-<h2><a id="Output_23"></a>Output</h2>
+<h2><a id="Output_51"></a>Output</h2>
 <hr>
 <blockquote>
 <p>The following system data is output by the program.</p>
 </blockquote>
 <ul>
-<li></li>
+<li>Movie Name -&gt; string</li>
+<li>Tickets Sold -&gt; short (unsigned)</li>
+<li>Gross Sales -&gt; float</li>
+<li>Percentage Donated -&gt; float</li>
+<li>Amount Donated -&gt; float</li>
+<li>Net Sales -&gt; float</li>
 </ul>
-<h3><a id="Example_29"></a>Example</h3>
-<pre><code class="language-c++">
+<h3><a id="Example_62"></a>Example</h3>
+<pre><code class="language-c++">Movie Name ....................... Journey to Mars
+Number of Tickets Sold ...........       <span class="hljs-number">2650</span>
+Gross Amount ..................... $ <span class="hljs-number">14592.00</span>
+Percentage of Amount Donated .....      <span class="hljs-number">10.00</span>%
+Amount Donated ................... $  <span class="hljs-number">1459.20</span>
+Net Sales ........................ $ <span class="hljs-number">13132.80</span>
 </code></pre>
-<h2><a id="Test_Data_34"></a>Test Data</h2>
+<h2><a id="Test_Data_72"></a>Test Data</h2>
 <table class="table table-striped table-bordered">
 <thead>
 <tr>
 <th style="text-align:center">Input</th>
-<th style="text-align:center">XXX</th>
-<th style="text-align:center">XXX</th>
-<th style="text-align:center">XXX</th>
+<th style="text-align:center">Movie</th>
+<th style="text-align:center">Adult Price</th>
+<th style="text-align:center">Adult Tickets</th>
+<th style="text-align:center">Child Price</th>
+<th style="text-align:center">Child Tickets</th>
+<th style="text-align:center">Percent Donated</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">Test 1</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">Journey to Mars</td>
+<td style="text-align:center">$6.45</td>
+<td style="text-align:center">1920</td>
+<td style="text-align:center">$3.45</td>
+<td style="text-align:center">640</td>
+<td style="text-align:center">10.00%</td>
 </tr>
 <tr>
 <td style="text-align:center">Test 2</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">Time Shift</td>
+<td style="text-align:center">$11.30</td>
+<td style="text-align:center">1446</td>
+<td style="text-align:center">$12.79</td>
+<td style="text-align:center">1136</td>
+<td style="text-align:center">14.84%</td>
 </tr>
 <tr>
 <td style="text-align:center">Test 3</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Alien, Flesh Eating, Hellbound, Zombified Living Dead Part 2 in Shocking 2-D</td>
+<td style="text-align:center">$2.67</td>
+<td style="text-align:center">232</td>
+<td style="text-align:center">$9.27</td>
+<td style="text-align:center">1168</td>
+<td style="text-align:center">2.49%</td>
 </tr>
 </tbody>
 </table>
@@ -65,29 +116,41 @@
 <thead>
 <tr>
 <th style="text-align:center">Output</th>
-<th style="text-align:center">XXX</th>
-<th style="text-align:center">XXX</th>
-<th style="text-align:center">XXX</th>
+<th style="text-align:center">Movie</th>
+<th style="text-align:center">Tickets Sold</th>
+<th style="text-align:center">Gross Sales</th>
+<th style="text-align:center">Percent Donated</th>
+<th style="text-align:center">Donation</th>
+<th style="text-align:center">Net Sales</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">Test 1</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">Journey to Mars</td>
+<td style="text-align:center">2650</td>
+<td style="text-align:center">$14592.00</td>
+<td style="text-align:center">10.00%</td>
+<td style="text-align:center">$1459.20</td>
+<td style="text-align:center">$13132.80</td>
 </tr>
 <tr>
 <td style="text-align:center">Test 2</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">Time Shift</td>
+<td style="text-align:center">2582</td>
+<td style="text-align:center">$30869.24</td>
+<td style="text-align:center">14.84%</td>
+<td style="text-align:center">$4580.99</td>
+<td style="text-align:center">$26288.24</td>
 </tr>
 <tr>
 <td style="text-align:center">Test 3</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Alien, Flesh Eating, Hellbound, Zombified Living Dead Part 2 in Shocking 2-D</td>
+<td style="text-align:center">1400</td>
+<td style="text-align:center">$11446.80</td>
+<td style="text-align:center">2.49%</td>
+<td style="text-align:center">$285.02</td>
+<td style="text-align:center">$11161.77</td>
 </tr>
 </tbody>
 </table>
