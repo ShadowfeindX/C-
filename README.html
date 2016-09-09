@@ -10,26 +10,113 @@ that allows Cindy to input the number of shares sold, the purchase price
 of each share, and the selling price of each share. The program outputs
 the amount invested, the total service charges, amount gained or lost,
 and the amount received after selling the stock.</p>
-<h3><a id="Example_11"></a>Example</h3>
-<pre><code class="language-c++"><span class="hljs-string">"How many shares did you sell?"</span> <span class="hljs-number">20</span> shares
-<span class="hljs-string">"What was your cost per share purchase?"</span> $<span class="hljs-number">12.32</span> per share
-<span class="hljs-string">"What was your cost per share on sale?"</span> $<span class="hljs-number">15</span> per share
+<h3><a id="Implementation_12"></a>Implementation</h3>
+<blockquote>
+<p>These are the constants and functions used to calculate the program output.</p>
+</blockquote>
+<pre><code>SERVICE_FEE = .015
+
+investment -&gt; shares_sold X cost_per_share
+
+profits -&gt; shares_sold X value_per_share
+
+service_charge -&gt; (investment + profits) X SERVICE_FEE
+
+net_return -&gt; profits - investment - service_charge
+
+&gt;&gt; values are rounded to 3 decimal places
+&gt;&gt; to allow for better precision
 </code></pre>
-<pre><code class="language-c++"><span class="hljs-string">"You invested:"</span> $<span class="hljs-number">246.40</span>
-<span class="hljs-string">"You were charged a total of"</span> $<span class="hljs-number">8.196</span> <span class="hljs-string">"in service fees."</span>
-<span class="hljs-string">"You managed a net gain of"</span> $<span class="hljs-number">45.404</span>
-</code></pre>
-<h4><a id="Input_22"></a>Input</h4>
+<h2><a id="Input_30"></a>Input</h2>
+<hr>
+<blockquote>
+<p>The following user data is needed to calculate the program output.</p>
+</blockquote>
 <ul>
 <li>Shares Sold -&gt; double</li>
-<li>Price per Share on Purchase -&gt; float</li>
-<li>Price per Share on Sale -&gt; float</li>
+<li>Cost per Share (on Purchase) -&gt; float</li>
+<li>Value per Share (on Sale) -&gt; float</li>
 </ul>
-<h4><a id="Output_27"></a>Output</h4>
+<h4><a id="Example_38"></a>Example</h4>
+<pre><code class="language-c++"><span class="hljs-string">"How many shares did you sell?"</span> <span class="hljs-number">20</span> shares
+<span class="hljs-string">"What was the cost per share?"</span> $<span class="hljs-number">12.32</span> per share
+<span class="hljs-string">"What was the value per share on sale?"</span> $<span class="hljs-number">15</span> per share
+</code></pre>
+<h2><a id="Output_45"></a>Output</h2>
+<hr>
+<blockquote>
+<p>The following system data is output by the program.</p>
+</blockquote>
 <ul>
 <li>Total Investment -&gt; double</li>
 <li>Service Fee -&gt; float</li>
 <li>Net Return -&gt; double</li>
 </ul>
+<h3><a id="Example_53"></a>Example</h3>
+<pre><code class="language-c++"><span class="hljs-string">"You invested:"</span> $<span class="hljs-number">246.40</span>
+<span class="hljs-string">"You were charged a total of"</span> $<span class="hljs-number">8.196</span> <span class="hljs-string">"in service fees."</span>
+<span class="hljs-string">"You managed a net gain of"</span> $<span class="hljs-number">45.404</span>
+</code></pre>
+<h2><a id="Test_Data_60"></a>Test Data</h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:center">Input</th>
+<th style="text-align:center">Shares Sold</th>
+<th style="text-align:center">Cost per Share</th>
+<th style="text-align:center">Value per Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Test 1</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">$12.32</td>
+<td style="text-align:center">$15</td>
+</tr>
+<tr>
+<td style="text-align:center">Test 2</td>
+<td style="text-align:center">278</td>
+<td style="text-align:center">$43.641</td>
+<td style="text-align:center">$76.117</td>
+</tr>
+<tr>
+<td style="text-align:center">Test 3</td>
+<td style="text-align:center">1053</td>
+<td style="text-align:center">$5.026</td>
+<td style="text-align:center">$5.725</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:center">Output</th>
+<th style="text-align:center">Initial Investment</th>
+<th style="text-align:center">Service Charges</th>
+<th style="text-align:center">Net Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Test 1</td>
+<td style="text-align:center">$246.40</td>
+<td style="text-align:center">$8.196</td>
+<td style="text-align:center">$45.404</td>
+</tr>
+<tr>
+<td style="text-align:center">Test 2</td>
+<td style="text-align:center">$12132.198</td>
+<td style="text-align:center">$499.391</td>
+<td style="text-align:center">$8528.937</td>
+</tr>
+<tr>
+<td style="text-align:center">Test 3</td>
+<td style="text-align:center">$5292.378</td>
+<td style="text-align:center">$169.812</td>
+<td style="text-align:center">$566.235</td>
+</tr>
+</tbody>
+</table>
 
 </body></html>

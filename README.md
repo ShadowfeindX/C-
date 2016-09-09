@@ -13,7 +13,7 @@ and the amount received after selling the stock.
 ### Implementation
 > These are the constants and functions used to calculate the program output.
 
-```c++
+```
 SERVICE_FEE = .015
 
 investment -> shares_sold X cost_per_share
@@ -24,8 +24,8 @@ service_charge -> (investment + profits) X SERVICE_FEE
 
 net_return -> profits - investment - service_charge
 
->> values are rounded to 3 decimal places to allow for better precision
-
+>> values are rounded to 3 decimal places
+>> to allow for better precision
 ```
 
 ## Input
@@ -59,8 +59,14 @@ net_return -> profits - investment - service_charge
 ```
 
 ## Test Data
-|        | Shares Sold | Cost per Share | Value per Share | Initial Investment | Service Charges | Net Return   |
-|:------:|:-----------:|:--------------:|:---------------:|:------------------:|:---------------:|:------------:|
-| Test 1 |    20       |     $12.32     |     $15         |     $246.40        |   $8.196        |  $45.404     |
-| Test 2 |   278       |    $43.641     |    $76.117      |    $12132.198      |   $499.391      |  $8528.937   |
-| Test 3 |  1053       |   $5.026       |   $5.725        |    $5292.378       |   $169.812      |   $566.235   |
+| Input  | Shares Sold | Cost per Share | Value per Share |
+|:------:|:-----------:|:--------------:|:---------------:|
+| Test 1 |    20       |     $12.32     |     $15         |
+| Test 2 |   278       |    $43.641     |    $76.117      |
+| Test 3 |  1053       |   $5.026       |   $5.725        |
+
+| Output | Initial Investment | Service Charges | Net Return   |
+|:------:|:------------------:|:---------------:|:------------:|
+| Test 1 |     $246.40        |   $8.196        |  $45.404     |
+| Test 2 |    $12132.198      |   $499.391      |  $8528.937   |
+| Test 3 |    $5292.378       |   $169.812      |   $566.235   |
