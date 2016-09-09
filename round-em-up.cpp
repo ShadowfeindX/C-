@@ -15,8 +15,9 @@ using namespace std;
  	//Create input loop
  	for (short i=0; i < 5; i++) {
  	    cin >> decimal;
- 	    value += decimal;
+ 	    value += decimal; //Add input to total value
  	}
+ 	//Output rounded total value
  	cout << round(value) << endl;
  	return 0;
  }
