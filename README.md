@@ -12,6 +12,7 @@ profit for that day.
 
 ### Implementation
 > These are the constants and functions used to calculate the program output.
+
 ```c++
 LITERS_PER_CARTON = 3.78
 
@@ -27,6 +28,7 @@ total_profits -> profits - production_costs
 ## Input
 ***
 > The following user data is needed to calculate the program output.
+
 + Cost per Liter -> Float ($)
 + Profits per Carton -> Float ($)
 + Liters per Day -> Float (Liters)
@@ -41,6 +43,7 @@ total_profits -> profits - production_costs
 ## Output
 ***
 > The following system data is output by the program.
+
 + Cartons Needed -> Integer (Cartons)
 + Daily Costs -> Float ($)
 + Daily Profits -> Float ($)
