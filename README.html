@@ -17,7 +17,6 @@ profit for that day.</p>
 <pre><code class="language-c++">LITERS_PER_CARTON = <span class="hljs-number">3.78</span>
 
 total_cartons -&gt; liter_produced / LITERS_PER_CARTON
-&gt;&gt; total cartons is rounded to the nearest whole number
 
 production_costs -&gt; cost_per_liter X liters_produced
 
@@ -25,31 +24,30 @@ profits -&gt; (total_cartons X profits_per_carton)
 
 total_profits -&gt; profits - production_costs
 </code></pre>
-<h2><a id="Input_27"></a>Input</h2>
+<h2><a id="Input_26"></a>Input</h2>
 <hr>
 <blockquote>
 <p>The following user data is needed to calculate the program output.</p>
 </blockquote>
 <ul>
-<li>Liters per Carton -&gt; Constant</li>
 <li>Cost per Liter -&gt; Float ($)</li>
 <li>Profits per Carton -&gt; Float ($)</li>
-<li>Liters Produced -&gt; Float (Liters)</li>
+<li>Liters per Day -&gt; Float (Liters)</li>
 </ul>
-<h4><a id="Example_34"></a>Example</h4>
+<h4><a id="Example_33"></a>Example</h4>
 <pre><code class="language-c++"><span class="hljs-string">"What is your production cost per liter?"</span> $<span class="hljs-number">0.59</span>
 <span class="hljs-string">"What are your profits on a carton of milk?"</span> $<span class="hljs-number">3.29</span>
 <span class="hljs-string">"What was your total milk production?"</span> <span class="hljs-number">131</span> L
 </code></pre>
-<h2><a id="Output_41"></a>Output</h2>
+<h2><a id="Output_40"></a>Output</h2>
 <hr>
 <blockquote>
 <p>The following system data is output by the program.</p>
 </blockquote>
 <ul>
 <li>Cartons Needed -&gt; Integer (Cartons)</li>
-<li>Production Costs -&gt; Float ($)</li>
-<li>Total Profits -&gt; Float ($)</li>
+<li>Daily Costs -&gt; Float ($)</li>
+<li>Daily Profits -&gt; Float ($)</li>
 </ul>
 <h3><a id="Example_47"></a>Example</h3>
 <pre><code class="language-c++"><span class="hljs-string">"You would need a total of:"</span> <span class="hljs-number">35</span> Cartons
@@ -63,10 +61,10 @@ total_profits -&gt; profits - production_costs
 <th style="text-align:center"></th>
 <th style="text-align:center">Cost Per Liter</th>
 <th style="text-align:center">Profits Per Carton</th>
-<th style="text-align:center">Liters Produced</th>
+<th style="text-align:center">Liters Per Day</th>
 <th style="text-align:center">Cartons Needed</th>
-<th style="text-align:center">Production Cost</th>
-<th style="text-align:center">Daily Profits</th>
+<th style="text-align:center">Total Cost</th>
+<th style="text-align:center">Total Profits</th>
 </tr>
 </thead>
 <tbody>
@@ -95,7 +93,7 @@ total_profits -&gt; profits - production_costs
 <td style="text-align:center">130</td>
 <td style="text-align:center">35</td>
 <td style="text-align:center">$172.90</td>
-<td style="text-align:center">-$85.40</td>
+<td style="text-align:center">$-85.40</td>
 </tr>
 </tbody>
 </table>

@@ -16,7 +16,6 @@ profit for that day.
 LITERS_PER_CARTON = 3.78
 
 total_cartons -> liter_produced / LITERS_PER_CARTON
->> total cartons is rounded to the nearest whole number
 
 production_costs -> cost_per_liter X liters_produced
 
@@ -28,10 +27,10 @@ total_profits -> profits - production_costs
 ## Input
 ***
 > The following user data is needed to calculate the program output.
-+ Liters per Carton -> Constant
 + Cost per Liter -> Float ($)
 + Profits per Carton -> Float ($)
-+ Liters Produced -> Float (Liters)
++ Liters per Day -> Float (Liters)
+
 #### Example
 ```c++
 "What is your production cost per liter?" $0.59
@@ -43,8 +42,9 @@ total_profits -> profits - production_costs
 ***
 > The following system data is output by the program.
 + Cartons Needed -> Integer (Cartons)
-+ Production Costs -> Float ($)
-+ Total Profits -> Float ($)
++ Daily Costs -> Float ($)
++ Daily Profits -> Float ($)
+
 ### Example
 ```c++
 "You would need a total of:" 35 Cartons
@@ -53,8 +53,9 @@ total_profits -> profits - production_costs
 ```
 
 ## Test Data
-|        | Cost Per Liter | Profits Per Carton | Liters Produced | Cartons Needed | Production Cost | Daily Profits |
-|:------:|:--------------:|:------------------:|:---------------:|:--------------:|:---------------:|:-------------:|
-| Test 1 | $0.39          | $1.33              | 5               | 2              | $1.95           | $0.71         |
-| Test 2 | $0.43          | $1.76              | 15              | 4              | $6.45           | $19.95        |
-| Test 3 | $1.33          | $2.50              | 130             | 35             | $172.90         | -$85.40       |
+|        | Cost Per Liter | Profits Per Carton | Liters Per Day | Cartons Needed | Total Cost | Total Profits |
+|:------:|:--------------:|:------------------:|:--------------:|:--------------:|:----------:|:-------------:|
+| Test 1 | $0.39          | $1.33              | 5              | 2              | $1.95      | $0.71         |
+| Test 2 | $0.43          | $1.76              | 15             | 4              | $6.45      | $19.95        |
+| Test 3 | $1.33          | $2.50              | 130            | 35             | $172.90    | $-85.40       |
+
