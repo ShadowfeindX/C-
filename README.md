@@ -6,7 +6,7 @@
 ### Implementation
 > These are the constants and functions used to calculate the program output.
 
-```c++
+```
 
 ```
 
@@ -15,7 +15,6 @@
 > The following user data is needed to calculate the program output.
 
 + 
-
 
 #### Example
 ```c++
@@ -34,7 +33,13 @@
 ```
 
 ## Test Data
-|        | XXX | XXX | XXX |
+| Input  | XXX | XXX | XXX |
+|:------:|:---:|:---:|:---:|
+| Test 1 |     |     |     |
+| Test 2 |     |     |     |
+| Test 3 |     |     |     |
+
+| Output | XXX | XXX | XXX |
 |:------:|:---:|:---:|:---:|
 | Test 1 |     |     |     |
 | Test 2 |     |     |     |
