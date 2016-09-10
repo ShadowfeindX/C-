@@ -1,4 +1,4 @@
-# Title
+# Movie Tickets
 ***
 ### Info
 A movie in a local theater is in great demand. To help a local charity,
@@ -41,11 +41,11 @@ Net Sales -> Gross Sales - Amount Donated
 
 #### Example
 ```c++
-"What movie are you screening?" TimeShift
+"What movie are you screening?" Journey to Mars
 "What is the price of an adult ticket?" $6.45
 "What is the price of a child ticket?" $3.45
 "How many adult tickets did you sell?" 1920
-"How many student tickets did you sell?" 640
+"How many child tickets did you sell?" 640
 "What percentage would you like to donate?" 10.00%
 ```
 
@@ -76,8 +76,6 @@ Net Sales ........................ $ 13132.80
 | Test 1 | Journey to Mars |   $6.45     |  1920         |  $3.45      |   640         |   10.00%        |
 | Test 2 | Time Shift      |   $11.30    |  1446         |  $12.79     |   1136        |   14.84%        |
 | Test 3 | Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Alien, Flesh Eating, Hellbound, Zombified Living Dead Part 2 in Shocking 2-D |   $2.67     |   232         |   $9.27     |   1168        |    2.49%        |
-
-
 
 | Output |     Movie       | Tickets Sold | Gross Sales | Percent Donated | Donation | Net Sales |
 |:------:|:---------------:|:------------:|:-----------:|:---------------:|:--------:|:---------:|
