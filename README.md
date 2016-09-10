@@ -18,29 +18,37 @@ Format your output to two decimal places.
 > These are the constants and functions used to calculate the program output.
 
 ```
-
+>> functions have been provided
 ```
 
 ## Input
 ***
 > The following user data is needed to calculate the program output.
 
-+ 
++ Net Balance -> float
++ Payment -> float
++ Length of Billing Cycle -> char
++ Time Before Payment -> char
++ Interest Rate -> float
 
 #### Example
 ```c++
-
+"What was the balance on your last billing statement?"
+"What was your last payment?"
+"What is the length of your billing cycle?"
+"..........days or something?"
+"What is your normal interest rate?"
 ```
 
 ## Output
 ***
 > The following system data is output by the program.
 
-+ 
++ Interest -> float
 
 ### Example
 ```c++
-
+Your interest this period was:"
 ```
 
 ## Test Data
