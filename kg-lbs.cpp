@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-    //Declare variables
+    // Declare variables
     double weight_kg, weight_lbs;
 
     // Get mass in kilograms from user
@@ -20,6 +20,7 @@ int main() {
     // Output weight in pounds
     cout << "You weigh approximately: "
          << weight_lbs << " lbs" << endl;
+         
     // END
-	return 0;
+    return 0;
 }
