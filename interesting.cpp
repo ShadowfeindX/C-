@@ -1,32 +1,67 @@
 /*
- * interesting.cxx
- * 
- * Copyright 2016 ChaosX <ChaosX@CHAOSX-PC>
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
- */
++ Net Balance -> float
++ Payment -> float
++ Length of Billing Cycle -> char
++ Time Before Payment -> char
++ Interest Rate -> float
+
+"What was the balance on your last billing statement?"
+"What was your last payment?"
+"What is the length of your billing cycle?"
+"..........days or something?"
+"What is your normal interest rate?"
+
++ Interest -> float
+
+Your interest this period was:"
+
+periodBalance = netBalance * d1
+clearedBalance = payment * d2
+`averageDailyBalance = (periodBalance - clearedBalance) / d1.`
+`interest = averageDailyBalance * interestRate`
+*/
 
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, char **argv)
-{
-	
-	return 0;
+int shorty();
+
+
+int main() {
+
+    double  netBalance , payment , cycle , remaining , rate;
+    double periodBalance, clearedBalance, averageDailyBalance, interest=0.0;
+    cin >> netBalance >> payment >> cycle >> remaining >> rate;
+
+    periodBalance = netBalance * cycle;
+    clearedBalance = payment * remaining;
+    averageDailyBalance = (periodBalance - clearedBalance) / cycle;
+    interest = averageDailyBalance * rate;
+
+
+    cout << periodBalance << ' ' << clearedBalance << ' ' << averageDailyBalance << ' ' << interest;
+
+	return 0;//shorty();
 }
 
+int shorty() {
+    double a, b, c;
+
+    cout << "Payment: $"; cin >> a;
+    cout << "Days Left in Billing Cycle: "; cin >> c;
+    c *= a; // c -> Cleared Balance
+
+    cout << "Length of Billing Cycle: "; cin >> b;
+    cout << "Last Statement Balance: $"; cin >> a;
+    a *= b; // a -> Period Balance
+    a -= c; // a -> Total Carried Balance
+    a /= b; // a -> Average Daily Balance
+
+    cout << "Current Interest Rate: %"; cin >> b;
+    a *= b/100; // a -> Interest
+
+    cout << "Interest: $" << a << endl;
+
+	return 0;
+}
