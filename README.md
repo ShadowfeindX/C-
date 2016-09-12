@@ -51,14 +51,14 @@ Your interest this period was:"
 ```
 
 ## Test Data
-| Input  | XXX | XXX | XXX |
-|:------:|:---:|:---:|:---:|
-| Test 1 |     |     |     |
-| Test 2 |     |     |     |
-| Test 3 |     |     |     |
+|        | Balance | Payment | Billing Cycle |
+|:------:|:-------:|:-------:|:-------------:|
+| Test 1 | $259.00 | $25.00  | 30 Days       |
+| Test 2 | $523.00 | $77.43  | 90 Days       |
+| Test 3 | $163.34 | $59.23  | 30 Days       |
 
-| Output | XXX | XXX | XXX |
-|:------:|:---:|:---:|:---:|
-| Test 1 |     |     |     |
-| Test 2 |     |     |     |
-| Test 3 |     |     |     |
+|        | Payment Day | Interest % | Interest $ |
+|:------:|:-----------:|:----------:|:----------:|
+| Test 1 | 15th        |   2.50%    |  $6.16250  |
+| Test 2 | 60th        |  23.11%    |  $108.936  |
+| Test 3 | 12th        |   3.10%    |  $4.32909  |
