@@ -4,7 +4,6 @@
 using namespace std;
  
  int main() {
-    
     //Declare variables
  	float decimal;
  	double value=0.0;
