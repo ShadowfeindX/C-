@@ -1,5 +1,5 @@
 /*
- * main.cxx
+ * box-seats.cpp
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -22,7 +22,7 @@
  */
 
 
-#include <stdio.h>
+#include <iostream>
 
 int main(int argc, char **argv)
 {

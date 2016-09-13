@@ -1,5 +1,5 @@
 /*
- * main.cpp
+ * box-seats.cxx
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -20,13 +20,20 @@
  * 
  * 
  */
-
-
+#include <fstream>
+#include <iomanip>
 #include <iostream>
-
-int main(int argc, char **argv)
-{
-	
+using namespace std;
+int main() {
+	float a,b=0.0,c=0.0;
+	string s;	fstream file;
+	cout << "File: "; cin >> s;	file.open(s);
+	if ( !file.is_open() ) cout << "File not found!" << endl;
+	else { file >> s >> a; while ( !file.eof() ){
+		b += a; c += a*stof(s);
+		file >> s >> a;	}
+	cout << "Sold: " << b << " tickets" << endl
+	<< "Profits: $" << fixed << setprecision(2) << c << endl;
+	file.close();	}
 	return 0;
 }
-
