@@ -59,6 +59,10 @@ int clean(char& c) {
     case '*':
         return a*b;
     case '/':
+        if ( b==0 ) {
+        	cout << "Error Divide by 0!" << endl;
+        	return c;
+        }
         return a/b;
     case '%':
         return a%b;
