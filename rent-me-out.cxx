@@ -1,32 +1,32 @@
-/*
- * main.cxx
- * 
- * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
- */
+#include <iomanip>
+#include <iostream>
+using namespace std;
 
+int main(){
+    float i[5]{0}, o[5]{0};
+    cout << "Room Cost? "; cin >> i[0];
+    cout << "Rooms Booked? "; cin >> i[1];
+    cout << "Days Reserved? "; cin >> i[2];
+    cout << "Sales Tax? "; cin >> i[3];
 
-#include <stdio.h>
+    if ( i[1] >= 10 && i[1] < 20) o[0] = 10;
+    if ( i[1] >= 20 && i[1] < 30) o[0] = 20;
+    if ( i[1] >= 30 ) o[0] = 30;
+    if ( i[2] >= 3 ) o[0] += 5;
 
-int main(int argc, char **argv)
-{
-	
-	return 0;
+    o[1] = i[0]*i[1]*i[2];
+    o[1] -= o[1] * o[0]/100;
+    o[2] = o[1]; o[2] *= i[3]/100;
+    o[2] += o[1];
+
+    cout << "\nRoom Cost: " << i[0] << endl
+         << "Discount: " << o[0] << '%' << endl
+         << "# of Rooms: " << i[1] << endl
+         << "# of Days: " << i[2] << endl
+         << fixed << setprecision(2) << endl
+         << "Subtotal: $" << o[1] << endl
+         << "Tax: " << i[3] << '%' << endl
+         << "Total: $" << o[2] << endl;
+
+        return 0;
 }
-
