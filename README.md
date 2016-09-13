@@ -14,15 +14,15 @@ profit for that day.
 > These are the constants and functions used to calculate the program output.
 
 ```c++
-LITERS_PER_CARTON = 3.78
+LITERS_PER_CARTON = 3.78;
 
-total_cartons -> liter_produced / LITERS_PER_CARTON
+total_cartons -> liter_produced / LITERS_PER_CARTON;
 
-production_costs -> cost_per_liter X liters_produced
+production_costs -> cost_per_liter X liters_produced;
 
-profits -> (total_cartons X profits_per_carton)
+profits -> (total_cartons X profits_per_carton);
 
-total_profits -> profits - production_costs
+total_profits -> profits - production_costs;
 ```
 
 ## Input
@@ -56,9 +56,15 @@ total_profits -> profits - production_costs
 ```
 
 ## Test Data
-|        | Cost Per Liter | Profits Per Carton | Liters Per Day | Cartons Needed | Total Cost | Total Profits |
-|:------:|:--------------:|:------------------:|:--------------:|:--------------:|:----------:|:-------------:|
-| Test 1 | $0.39          | $1.33              | 5              | 2              | $1.95      | $0.71         |
-| Test 2 | $0.43          | $1.76              | 15             | 4              | $6.45      | $19.95        |
-| Test 3 | $1.33          | $2.50              | 130            | 35             | $172.90    | $-85.40       |
+| Input  | Cost Per Liter | Profits Per Carton | Liters Per Day |
+|:------:|:--------------:|:------------------:|:--------------:|
+| Test 1 | $0.39          | $1.33              | 5              |
+| Test 2 | $0.43          | $1.76              | 15             |
+| Test 3 | $1.33          | $2.50              | 130            |
 
+
+| Output | Cartons Needed | Total Cost | Total Profits |
+|:------:|:--------------:|:----------:|:-------------:|
+| Test 1 | 2              | $1.95      | $0.71         |
+| Test 2 | 4              | $6.45      | $19.95        |
+| Test 3 | 35             | $172.90    | $-85.40       |
