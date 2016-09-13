@@ -26,17 +26,17 @@ interest. Format your output to two decimal places.
 
 + Net Balance -> float
 + Payment -> float
-+ Length of Billing Cycle -> char
-+ Time Before Payment -> char
++ Length of Billing Cycle -> short
++ Days After Payment -> short
 + Interest Rate -> float
 
 #### Example
 ```c++
-"What was the balance on your last billing statement?"
-"What was your last payment?"
-"What is the length of your billing cycle?"
-"..........days or something?"
-"What is your normal interest rate?"
+"Last Payment:" $25.00
+"Length of Billing Cycle:" 30 Days
+"Remaining Days in Billing Cycle:" 15 Days
+"Last Statement Balance:" $259.00
+"Current Interest Rate:" 2.5%
 ```
 
 ## Output
@@ -47,7 +47,7 @@ interest. Format your output to two decimal places.
 
 ### Example
 ```c++
-Your interest this period was:"
+"Your interest this period was" $6.16.
 ```
 
 ## Test Data

@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     double a, b, c;
     
-    cout << "Payment: $"; cin >> a;
+    cout << "Last Payment: $"; cin >> a;
     cout << "Length of Billing Cycle: "; cin >> b;
     cout << "Days Left in Billing Cycle: "; cin >> c;
     
@@ -22,8 +22,8 @@ int main() {
     
     a *= b/100; // a -> Interest
     
-    cout << "Interest: $" << fixed
-		 << setprecision(2) << a << endl;
+    cout << "Your interest due this billing period is $" << fixed
+		 << setprecision(2) << a << '.' << endl;
 	
 	return 0;
 }

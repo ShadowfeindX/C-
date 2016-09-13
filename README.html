@@ -27,16 +27,16 @@ interest. Format your output to two decimal places.</p>
 <ul>
 <li>Net Balance -&gt; float</li>
 <li>Payment -&gt; float</li>
-<li>Length of Billing Cycle -&gt; char</li>
-<li>Time Before Payment -&gt; char</li>
+<li>Length of Billing Cycle -&gt; short</li>
+<li>Days After Payment -&gt; short</li>
 <li>Interest Rate -&gt; float</li>
 </ul>
 <h4><a id="Example_32"></a>Example</h4>
-<pre><code class="language-c++"><span class="hljs-string">"What was the balance on your last billing statement?"</span>
-<span class="hljs-string">"What was your last payment?"</span>
-<span class="hljs-string">"What is the length of your billing cycle?"</span>
-<span class="hljs-string">"..........days or something?"</span>
-<span class="hljs-string">"What is your normal interest rate?"</span>
+<pre><code class="language-c++"><span class="hljs-string">"Last Payment:"</span> $<span class="hljs-number">25.00</span>
+<span class="hljs-string">"Length of Billing Cycle:"</span> <span class="hljs-number">30</span> Days
+<span class="hljs-string">"Remaining Days in Billing Cycle:"</span> <span class="hljs-number">15</span> Days
+<span class="hljs-string">"Last Statement Balance:"</span> $<span class="hljs-number">259.00</span>
+<span class="hljs-string">"Current Interest Rate:"</span> <span class="hljs-number">2.5</span>%
 </code></pre>
 <h2><a id="Output_41"></a>Output</h2>
 <hr>
@@ -47,7 +47,7 @@ interest. Format your output to two decimal places.</p>
 <li>Interest -&gt; float</li>
 </ul>
 <h3><a id="Example_47"></a>Example</h3>
-<pre><code class="language-c++">Your interest this period was:"
+<pre><code class="language-c++"><span class="hljs-string">"Your interest this period was"</span> $<span class="hljs-number">6.16</span>.
 </code></pre>
 <h2><a id="Test_Data_52"></a>Test Data</h2>
 <table class="table table-striped table-bordered">
