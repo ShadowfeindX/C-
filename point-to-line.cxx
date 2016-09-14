@@ -13,15 +13,13 @@ equation in the form y = mx + b.
 */
 
 #include <iostream>
-using namespace std;
-int main(){
-    char c;
+int main() {
     float x[3],y[3];
-    cin >> c >> x[1] >> c >> y[1] >> c;
-    cin >> c >> x[2] >> c >> y[2] >> c;
-    cout << x[1] << ' ' << y[1] << endl
-         << x[2] << ' ' << y[2] << endl;
-
-    cout << "Slope: " << (y[2] - y[1])/(x[2] - x[1]);
+    char c; std::cin >> c;
+    std::cin >> x[1] >> c >> y[1] >> c;
+    std::cin >> c >> x[2] >> c >> y[2] >> c;
+    y[0] = y[2] - y[1]; x[0] = x[2] - x[1];
+    y[0] /= x[0]; x[0] = y[0] * x[1]; x[0] = y[1] - x[0];
+    std::cout << "y = " << y[0] << "x + " << x[0] << std::endl;
     return 0;
 }
