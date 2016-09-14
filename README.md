@@ -1,4 +1,4 @@
-# Title
+# Point to Line
 ***
 ### Info
 Let l be a line in the x-y plane. If l is a vertical line, its equation is x = a
@@ -24,8 +24,8 @@ the form `y = mx + b`.
 ***
 > The following user data is needed to calculate the program output.
 
-+ Point 1 -> (x,y)
-+ Point 2 -> (x,y)
++ Point A -> (x,y)
++ Point B -> (x,y)
 
 #### Example
 ```c++
@@ -38,10 +38,12 @@ the form `y = mx + b`.
 > The following system data is output by the program.
 
 + Linear Function -> y = mx + b
++ Slope of Function -> string
 
 ### Example
 ```c++
 "Line AB:" y = 0.5x + 1
+"The function is increasing."
 ```
 
 ## Test Data
