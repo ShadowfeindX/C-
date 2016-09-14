@@ -14,12 +14,35 @@ equation in the form y = mx + b.
 
 #include <iostream>
 int main() {
-    float x[3],y[3];
-    char c; std::cin >> c;
-    std::cin >> x[1] >> c >> y[1] >> c;
-    std::cin >> c >> x[2] >> c >> y[2] >> c;
+
+	std::string c; float x[3],y[3];
+
+    std::cout << "Enter Point A: ";
+    std::cin >> c[0] >> x[1] >> c[0] >> y[1] >> c[1];
+
+    std::cout << "Enter Point B: ";
+    std::cin >> c[2] >> x[2] >> c[3] >> y[2] >> c[4];
+
     y[0] = y[2] - y[1]; x[0] = x[2] - x[1];
-    y[0] /= x[0]; x[0] = y[0] * x[1]; x[0] = y[1] - x[0];
-    std::cout << "y = " << y[0] << "x + " << x[0] << std::endl;
+
+    if ( y[1]==y[2] && x[1]==x[2] ) {
+		std::cout << "The 2 points you entered are the same."
+		<< std::endl; return 1;	}
+
+	if ( x[0]==0 ) {
+		std::cout << "l is a vertical line."
+		<< std::endl; return 2;	}
+
+	if ( y[0]==0 ) {
+		std::cout << "l is a horizontal line."
+		<< std::endl; return 3; }
+
+    y[0] /= x[0];x[0] = y[0] * x[1];x[0] = y[1] - x[0];
+
+    if ( y[0] > 0 ) c = "increasing."; else c = "decreasing.";
+
+    std::cout << "The function l = " << y[0]
+    << "x + " << x[0] << " is " << c << std::endl;
+
     return 0;
 }
