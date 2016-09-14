@@ -15,7 +15,7 @@ equation in the form y = mx + b.
 #include <iostream>
 int main() {
 
-	std::string c; float x[3],y[3];
+    std::string c; float x[3],y[3];
 
     std::cout << "Enter Point A: ";
     std::cin >> c[0] >> x[1] >> c[0] >> y[1] >> c[1];
@@ -26,16 +26,16 @@ int main() {
     y[0] = y[2] - y[1]; x[0] = x[2] - x[1];
 
     if ( y[1]==y[2] && x[1]==x[2] ) {
-		std::cout << "The 2 points you entered are the same."
-		<< std::endl; return 1;	}
+	std::cout << "The 2 points you entered are the same."
+	<< std::endl; return 1;	}
 
-	if ( x[0]==0 ) {
-		std::cout << "l is a vertical line."
-		<< std::endl; return 2;	}
+    if ( x[0]==0 ) {
+	std::cout << "l is a vertical line."
+	<< std::endl; return 2;	}
 
-	if ( y[0]==0 ) {
-		std::cout << "l is a horizontal line."
-		<< std::endl; return 3; }
+    if ( y[0]==0 ) {
+	std::cout << "l is a horizontal line."
+	<< std::endl; return 3; }
 
     y[0] /= x[0];x[0] = y[0] * x[1];x[0] = y[1] - x[0];
 
