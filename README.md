@@ -1,4 +1,4 @@
-# Title
+# Discriminant
 ***
 ### Info
 
