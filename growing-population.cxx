@@ -1,5 +1,5 @@
 /*
- * main.cxx
+ * growing-population.cxx
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -22,11 +22,21 @@
  */
 
 
-#include <stdio.h>
-
-int main(int argc, char **argv)
-{
+#include <iostream>
+using namespace std;
+int main() {
+	char c;
+	float x[2], y[2];
+	cout << "Please enter population data in (P,g) format where" << endl
+		 << "P is population and g is the current growth rate.\n" << endl;
+	cout << "Town A: ";	cin >> c >> y[0] >> c >> x[0] >> c;
+	cout << "Town B: ";	cin >> c >> y[1] >> c >> x[1] >> c;
+	if (system("CLS")) system("clear");
 	
+	x[0] /= 100; x[1] /= 100;
+	for (c=0; y[1] > y[0]; y[0]+=y[0]*x[0], y[1]+=y[1]*x[1], c++ ) {
+		printf ("Year %i: A -> %g B-> %g\n", c, y[0], y[1]);
+	};	printf ("Year %i: A -> %g B-> %g\n", c, y[0], y[1]);
 	return 0;
 }
 
