@@ -22,11 +22,37 @@
  */
 
 
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <algorithm>
+#include <strings.h>
 
-int main(int argc, char **argv)
-{
-	
+using namespace std;
+
+bool casecmp(string&, string&);
+void readfile(string&, vector<string>&);
+
+int main() {
+	string s;
+	ofstream o("test");
+	vector<string> v;
+	cin >> s; readfile(s, v);
+	cin >> s; readfile(s, v);
+	sort (v.begin(), v.end(), casecmp);
+	for (string s : v) o << s << endl;
 	return 0;
 }
 
+void readfile(string& s, vector<string>& v){
+	ifstream i(s);
+	getline(i,s);
+	while ( i.good() ) {
+		v.push_back(s);
+		getline(i,s);
+	}
+}
+
+bool casecmp(string& a, string& b) {
+	int i = strcasecmp(a.c_str(), b.c_str());
+	if (i <= 0) return true; return false;}
