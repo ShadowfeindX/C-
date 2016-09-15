@@ -1,5 +1,5 @@
 /*
- * main.cxx
+ * is_vowel.cxx
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -22,11 +22,17 @@
  */
 
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int main(int argc, char **argv)
-{
-	
+bool isVowel(char& c, string& v){if (v.find(c) <= 5) return true;}
+
+int main() {
+	string vowels("aeiou");
+	string s; int i = 0; cin >> s;
+	for (char c : s) if (isVowel(c,vowels)) ++i;
+	cout << i << " vowels" << endl;
 	return 0;
 }
+
 
