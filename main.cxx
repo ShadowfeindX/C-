@@ -22,11 +22,27 @@
  */
 
 
-#include <stdio.h>
-
-int main(int argc, char **argv)
-{
-	
+#include <iostream>
+using namespace std;
+int main() {
+	char c;
+	cout << "Jason's Coffee Stand" << endl
+		 << "Please select an option: " << endl << endl
+		 << "1 - Check Cups Sold" << endl
+		 << "2 - Check Coffee Sold" << endl
+		 << "3 - Check Money" << endl << endl
+		 << "A - Buy Coffee " << endl
+		 << "X - Exit" << endl;
+	cout << "Enter: ";
+	switch ( getchar() ) {
+		case '1':
+		case '2':
+		case '3':
+		case 'A':
+		case 'X':
+		default:
+			if ( system("CLS") ) system("clear");
+	}
 	return 0;
 }
 
