@@ -22,11 +22,25 @@
  */
 
 
-#include <stdio.h>
-
-int main(int argc, char **argv)
-{
-	
-	return 0;
+#include <iostream>
+#include <vector>
+#include <algorithm>
+//#include <iterator>
+using namespace std;
+int main() {
+    vector<int> primes; primes.push_back(2);
+    int p; cout << "Enter a number: "; cin >> p;
+    for(int i=3; i <= p; i++) {
+        bool prime=true;
+        for(int j=0;j<primes.size() && primes[j]*primes[j] <= i;j++) {
+            if(i % primes[j] == 0) {
+                prime=false; break;	}	}
+        if(prime) {
+            primes.push_back(i);
+            // cout << i << " ";	
+            }	}
+    bool prime = find(begin(primes), end(primes), p) != end(primes);
+    if (prime) cout << "It's a prime!" << endl;
+    else cout << "Sorry, no prime here!" << endl;
+    return 0;
 }
-
