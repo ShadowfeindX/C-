@@ -1,5 +1,5 @@
 /*
- * main.cxx
+ * triangulate.cxx
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -22,11 +22,29 @@
  */
 
 
-#include <stdio.h>
+#include <iostream>
 
-int main(int argc, char **argv)
+using namespace std;
+enum triangle{scalene, isosceles, equilateral, degenerate};
+string type[]{"Scalene", "Isosceles", "Equilateral", "Degenerate"};
+int main(int argc, char *argv[])
 {
-	
-	return 0;
-}
+    //char x;
+    int a,b,c;
+    triangle T;
+    //start:
 
+    cin >> a >> b >> c;
+    if ( a+b>c && b+c>a && a+c>b ) {
+        if ( a==b ) {
+            if ( a==c ) {
+                T = equilateral;
+            } else T = isosceles;
+        } else T = scalene;
+    } else T = degenerate;
+
+    cout << type[T] << endl;
+    //cout << "Check another? (Y/N) "; cin >> x;
+    //if (x=='Y' || x=='y') goto start;
+    return 0;
+}
