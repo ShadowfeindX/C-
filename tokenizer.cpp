@@ -1,5 +1,5 @@
 /*
- * main.cxx
+ * tokenizer.cpp
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -21,12 +21,41 @@
  * 
  */
 
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string.h>
 
-#include <stdio.h>
-
-int main(int argc, char **argv)
+using namespace std;
+int main(int argc, char *argv[])
 {
-	
-	return 0;
-}
+    //Declare Variables
+    string c,s;
+    
+    //Load Files
+    ifstream i ("Ch7_Ex9Data.txt");
+    ofstream o ("test.txt");
+    
+    //Read first line form file
+    i >> c; getline(i,s);
+    
+    //Start Data Loop
+    while(!i.eof())
+    {
+        //Format Name
+        c.erase(c.end()-1);
+        s.erase(s.begin());
+        
+        //Output Name to File
+        o << s << ' ' << c << endl;
+        
+        //Read Next Name
+        i >> c; getline(i,s);
+    }
+    
+    //Close Files
+    i.close(); o.close();
+    cout << "Done!" << endl;
 
+    return 0;
+}
