@@ -22,11 +22,22 @@
  */
 
 
-#include <stdio.h>
+#include <algorithm>
+#include <iostream>
 
-int main(int argc, char **argv)
-{
-	
-	return 0;
+using namespace std;
+int smallestIndex(int a[], int size);
+int largestIndex(int a[], int size);
+
+int main(int argc, char *argv[]) {
+    int a[5] {3,1,6,8,10};
+    cout << "Index of Smallest Value: " << smallestIndex(a,5) << endl;
+    cout << "Index of Largest Value: " << largestIndex(a,5) << endl;
+    return 0;
+} int smallestIndex(int a[], int size) {
+    int b = *min_element(a,a+size);
+    return distance(a,find(a,a+size,b));
+} int largestIndex(int a[], int size) {
+   int b[1] = {*max_element(a,a+size)};
+   return distance(a,find_end(a,a+size,b,b));
 }
-
