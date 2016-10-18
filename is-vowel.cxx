@@ -25,12 +25,12 @@
 #include <iostream>
 using namespace std;
 
-bool isVowel(char& c, string& v){if (v.find(c) <= 5) return true;}
+bool isVowel(char& c, string& v){if (v.find(c) != string::npos) return true;}
 
 int main() {
-	string vowels("aeiou");
+	string vowels("AaEeIiOoUu");
 	string s; int i = 0; cin >> s;
-	for (char c : s) if (isVowel(c,vowels)) ++i;
+	for (char c : s) if (isVowel(c, vowels)) ++i;
 	cout << i << " vowels" << endl;
 	return 0;
 }
