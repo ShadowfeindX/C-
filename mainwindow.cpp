@@ -18,7 +18,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::send_help()
 {
-    QMessageBox::information(this,"Help","Created by: ShadowfeindX");
+    QMessageBox::information(this,"Help","Created by: Rickey Barnes");
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
