@@ -1,32 +1,73 @@
 /*
- * main.cpp
- * 
- * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
+ * Name: calculator.cpp
+ * Author: Rickey Barnes
+ *
+ * Info: This program allows the user to choose between
+ * using a switch statement or a series of if-else statements
+ * to calculate the value of a simple equation.
+ *
  */
 
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, char **argv)
-{
-	
-	return 0;
+int dumb(char&);
+int clean(char&);
+
+int main() {
+	char c;
+	start:
+	// Allows the user to choose a version
+	cout << "Version? (1/2) "; cin >> c;
+	// Start version 1
+	if ( c==49 ) return dumb(c);
+	// Start version 2
+	else if ( c==50 ) return clean(c);
+	// Return user input if incorrect version
+	else return c-'0';
 }
 
+int dumb(char& c){
+    int a,b;
+    // Get equation from user
+    cout << "Equation: "; cin >> a >> c >> b;
+    // Process equation with if-else
+	// Return value
+    if ( c=='+' ) return a+b;
+    else if ( c=='-' ) return a-b;
+    else if ( c=='*' ) return a*b;
+    // Check for divide by 0
+    else if ( c=='/' ) if ( b==0 ) {
+	    cout << "Error Divide by 0!" << endl;
+	    return c;
+    } return c
+    else if ( c=='%' ) return a%b;
+	else return c;
+}
+
+int clean(char& c) {
+    int a,b;
+    // Get equation from user
+	// Return value
+    cout << "Equation: "; cin >> a >> c >> b;
+    switch (c) {
+    case '+':
+        return a+b;
+    case '-':
+        return a-b;
+    case '*':
+        return a*b;
+    case '/':
+    // Check for divide by 0
+        if ( b==0 ) {
+        	cout << "Error Divide by 0!" << endl;
+        	return c;
+        }
+        return a/b;
+    case '%':
+        return a%b;
+    default:
+        return c;
+    }
+}
