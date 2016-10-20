@@ -28,16 +28,16 @@
 
 using namespace std;
 int main(int argc, char *argv[])
-{
-    char a;
-    vector<int> b(3);
-    srand(time(NULL));
+{	
+	enum game {ROCK,PAPER,SCISSORS};
     string i, s[3]{"Rock", "Paper", "Scissors"};
 
-    for(;;)
+    for(bool t = false;!t;t = false)
     {
-        shoot:
-        bool t = false;
+    	char a;
+    	vector<game> b(3);
+    	srand(time(NULL));
+        //t = false;
         if (system("CLS")) system("clear");
         for (string c : s)
         {
@@ -47,23 +47,24 @@ int main(int argc, char *argv[])
         } cout << "Shoot!" << endl;
         cout << "You -> "; cin >> i;
         for (string c : s) if (strcasecmp(c.c_str(),i.c_str())==0) t = true;
-        if (!t) goto shoot;
-
+        if (!t) continue;
+        //t = false;	
+		
         switch (i[0])
         {
             case 'r': case 'R':
-                b = {2,0,1};
+                b = {SCISSORS,ROCK,PAPER};
                 break;
             case 'p': case 'P':
-                b = {0,1,2};
+                b = {ROCK,PAPER,SCISSORS};
                 break;
             case 's': case 'S':
-                b = {1,2,0};
+                b = {PAPER,SCISSORS,ROCK};
                 break;
             default:
-                b = {2,1,0};
+                b = {SCISSORS,PAPER,ROCK};
                 cout << "Try Again!" << endl;
-                goto shoot;
+                continue;
         }
 
         cout << "CPU -> ";
@@ -77,15 +78,19 @@ int main(int argc, char *argv[])
         if (a == b[0]) cout << "You Win!" << endl;
         if (a == b[1]) cout << "It's A Tie!" << endl;
         if (a == b[2]) cout << "You Lose!" << endl;
-
-        ask:
-        cout << "Wanna play again? ";
-        cin >> i;
-        if (i[0]=='n' || i[0]=='N') break;
-        else if (i[0]=='y' || i[0]=='Y'){
-            if (system("CLS")) system("clear");
-            continue;   }
-        else goto ask;
+		
+		bool ask = true;
+        do
+        {
+	        cout << "Wanna play again? "; cin >> i;
+	        if (i[0]=='n' || i[0]=='N') ask = false;
+	        else if (i[0]=='y' || i[0]=='Y') {
+	            if (system("CLS")) system("clear");
+	            t = ask = false;
+			}
+	        else ask = true;
+	    } while (ask);
+	    if (t) return 1;
     }
     return 0;
 }
