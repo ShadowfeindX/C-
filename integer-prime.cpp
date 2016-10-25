@@ -1,32 +1,30 @@
-/*
- * main.cpp
- * 
- * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
- */
-
-
 #include <iostream>
-
-int main(int argc, char **argv)
-{
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main() {
+	// Create space for generated primes
+	// Set size of vector to 2
+    vector<int> primes; primes.push_back(2);
+    
+    // Create input variable for integer
+    // Get input from user
+    int p; cout << "Enter a number: "; cin >> p;
+    
+    // Generate primes from 3 to the entered number
+    for(int i=3; i <= p; i++) {
+        bool prime=true;
+        for(int j=0;j<primes.size() && primes[j]*primes[j] <= i;j++) {
+            if(i % primes[j] == 0) {
+                prime=false; break;	}	}
+        if(prime) {
+            primes.push_back(i);	
+            }
+    // Check if input is included in primes
+	} bool prime = find(begin(primes), end(primes), p) != end(primes);
 	
-	return 0;
+	// Output result to user
+    if (prime) cout << "It's a prime!" << endl;
+    else cout << "Sorry, no prime here!" << endl;
+    return 0;
 }
-
