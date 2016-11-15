@@ -1,5 +1,5 @@
 /*
- * main.cpp
+ * main.cxx
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -22,11 +22,33 @@
  */
 
 
+#include <fstream>
 #include <iostream>
 
-int main(int argc, char **argv)
+using namespace std;
+int main(int argc, char *argv[])
 {
-	
-	return 0;
+    string s;
+    char responses[20];
+    char answers[20];
+    ifstream i ("Ch8_Ex6Data.txt");
+    ofstream o ("test.txt");
+    i >> answers >> s;
+    i.get(); i.get(responses, 20); //getline(i,s[1]);
+    while (!i.eof()) {
+        int j=0,g=0;
+        for (char c:answers) { c==responses[j]?++g:g;j++;  }
+		o << s << ' ';
+        o.write(responses,20);
+        o << ' ' << (g/20.0)*100.0 << ' ';
+        switch ((int)((g/20.0)*100)) {
+            case 90 ... 100:o << "A" << endl;break;
+            case 80 ... 89:o << "B" << endl;break;
+            case 70 ... 79:o << "C" << endl;break;
+            case 60 ... 69:o << "D" << endl;break;
+            default:o << "F" << endl;
+        } i >> s; i.get();
+        i.get(responses, 20);
+    } cout << "Done!" << endl;
+    return 0;
 }
-
