@@ -1,5 +1,5 @@
 /*
- * main.cpp
+ * triangulate.cxx
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -24,9 +24,38 @@
 
 #include <iostream>
 
-int main(int argc, char **argv)
-{
-	
-	return 0;
+using namespace std;
+
+enum triangle{scalene, isosceles, equilateral, degenerate};
+
+string type[]{"Scalene", "Isosceles", "Equilateral", "Degenerate"};
+
+int* input(int i[]) {
+	char c;
+	cout << "Please enter the sides of your triangle in (A,B,C) format: ";
+	cin >> c >> i[0] >> c >> i[1] >> c >> i[2] >> c;
+	return i;
 }
 
+triangle test(int* i){
+	triangle T;	int a=i[0], b=i[1], c=i[2];
+    if ( a+b>c && b+c>a && a+c>b ) {
+        if ( a==b ) {
+            if ( a==c ) {
+                T = equilateral;
+            } else T = isosceles;
+        } else T = scalene;
+    } else T = degenerate;
+    return T;
+}
+
+bool output(triangle T){
+	char c;
+	cout << "Your triangle is: "<< type[T] << endl;
+	cout << "Would you like to check another triangle? (Y/N) ";
+	cin >> c;
+	if (c=='y' || c=='Y') return true;
+	else return false;
+}
+
+int main(){	while (output(test(input(new int[3])))){if (system("CLS")) system("clear");}; return 0; }
