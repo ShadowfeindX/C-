@@ -1,5 +1,5 @@
 /*
- * main.cxx
+ * 20-questions.cxx
  * 
  * Copyright 2016 ShadowfeindX <shadowfeind@programmer.net>
  * 
@@ -24,31 +24,49 @@
 
 #include <fstream>
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
-int main(int argc, char *argv[])
+
+
+void getinfo(ifstream& i, char id[], char a[] ){
+	i.get(); i.get(id,8+1);
+	i.get(); i.get(a,20+1);
+}
+
+char grade(int& g, char a[], char key[]){
+	string k = key;	g=0; int j=0;
+	for (char c:k) { 
+		g += c == a[j] ? 2 : (a[j] == ' ' ? 0 : -1);
+		j++;
+	}
+	switch ((int)((g/40.0)*100)) {
+        case 90 ... 100:return 'A';
+        case 80 ... 89:return 'B';
+        case 70 ... 79:return 'C';
+        case 60 ... 69:return 'D';
+        default:return 'F';
+    }
+}
+
+void printinfo(char id[], char a[], char l, int g){
+	printf("Student Id: %s\nAnswers: %s\nGrade: %d/40 %c\n\n",id,a,g,l);
+}
+
+int main()
 {
-    string s;
-    char responses[20];
-    char answers[20];
-    ifstream i ("Ch8_Ex6Data.txt");
-    ofstream o ("test.txt");
-    i >> answers >> s;
-    i.get(); i.get(responses, 20); //getline(i,s[1]);
-    while (!i.eof()) {
-        int j=0,g=0;
-        for (char c:answers) { c==responses[j]?++g:g;j++;  }
-		o << s << ' ';
-        o.write(responses,20);
-        o << ' ' << (g/20.0)*100.0 << ' ';
-        switch ((int)((g/20.0)*100)) {
-            case 90 ... 100:o << "A" << endl;break;
-            case 80 ... 89:o << "B" << endl;break;
-            case 70 ... 79:o << "C" << endl;break;
-            case 60 ... 69:o << "D" << endl;break;
-            default:o << "F" << endl;
-        } i >> s; i.get();
-        i.get(responses, 20);
-    } cout << "Done!" << endl;
+	ifstream i ("Ch8_Ex6Data.txt");
+	int g; char key[20], id[8], a[20], l;
+    i.get(key, 20+1); printf("Answer Key = %s\n\n",key);
+    
+    do {
+    	fill(begin(id), end(id), ' ');
+	    fill(begin(a), end(a), ' ');
+	    getinfo(i,id,a);
+	    l = grade(g,a,key);
+	    printinfo(id,a,l,g);
+	} while(!i.eof());
+	cout.flush();
+    
     return 0;
 }
