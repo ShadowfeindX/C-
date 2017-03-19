@@ -12,7 +12,9 @@ int main() {
 	cout << "Town A: ";	cin >> c >> y[0] >> c >> x[0] >> c;
 	cout << "Town B: ";	cin >> c >> y[1] >> c >> x[1] >> c;
 	// Calculate growth rates
-	if (system("CLS")) system("clear");	x[0] /= 100; x[1] /= 100;
+	if (system("CLS")) system("clear");
+	// Convert to %
+	x[0] /= 100; x[1] /= 100;
 	// Display population for every year that A < B
 	for (c=0; y[1] > y[0]; y[0]+=y[0]*x[0], y[1]+=y[1]*x[1], c++ ) {
 		printf ("Year %i: A -> %g B-> %g\n", c, y[0], y[1]);
